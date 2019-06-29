@@ -8,6 +8,9 @@
 	--mainSpacing: 0.1rem;
 	--mainTransition: all 0.3s linear;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 * {
 	margin: 0;
