@@ -4,23 +4,23 @@
 			"sys": { "id": "1" },
 			"fields": {
 				"title": "queen panel bed",
-				"price": 350.99,
-				"image": { "fields": { "file": { "url": "./images/queen-bed.jpg" } } }
+				"price": 85.99,
+				"image": { "fields": { "file": { "url": "./images/content1.jpg" } } }
 			}
 		},
 		{
 			"sys": { "id": "2" },
 			"fields": {
 				"title": "king panel bed",
-				"price": 429.99,
-				"image": { "fields": { "file": { "url": "./images/content1.jpg" } } }
+				"price": 75.99,
+				"image": { "fields": { "file": { "url": "./images/queen-bed.jpg" } } }
 			}
 		},
 		{
 			"sys": { "id": "3" },
 			"fields": {
 				"title": "single panel bed",
-				"price": 170.99,
+				"price": 50.99,
 				"image": { "fields": { "file": { "url": "./images/content3.jpg" } } }
 			}
 		},
@@ -28,7 +28,7 @@
 			"sys": { "id": "4" },
 			"fields": {
 				"title": "twin panel bed",
-				"price": 229.99,
+				"price": 30.99,
 				"image": { "fields": { "file": { "url": "./images/content4.jpg" } } }
 			}
 		},
@@ -36,7 +36,7 @@
 			"sys": { "id": "5" },
 			"fields": {
 				"title": "kitchen furniture",
-				"price": 880.99,
+				"price": 80.99,
 				"image": { "fields": { "file": { "url": "./images/content-5.jpg" } } }
 			}
 		},
@@ -44,7 +44,7 @@
 			"sys": { "id": "6" },
 			"fields": {
 				"title": "set furniture",
-				"price": 320.99,
+				"price": 35.99,
 				"image": { "fields": { "file": { "url": "./images/reading-room-furniture.jpg" } } }
 			}
 		},
@@ -52,15 +52,15 @@
 			"sys": { "id": "7" },
 			"fields": {
 				"title": "couch",
-				"price": 450.99,
+				"price": 50.99,
 				"image": { "fields": { "file": { "url": "./images/content7-1.jpg" } } }
 			}
 		},
 		{
 			"sys": { "id": "8" },
 			"fields": {
-				"title": "table",
-				"price": 330.99,
+				"title": "chair",
+				"price": 30.99,
 				"image": { "fields": { "file": { "url": "./images/content8.jpg" } } }
 			}
 		}

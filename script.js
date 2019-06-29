@@ -142,13 +142,42 @@ class UI {
 		// clear cart button:
 		clearCartBtn.addEventListener('click', () => this.clearCartMethod());
 		// cart functionality:
+		cartContent.addEventListener('click', (event) => {
+			if (event.target.classList.contains('remove-item')) {
+				let removeItem = event.target;
+				let id = removeItem.dataset.id;
+				cartContent.removeChild(removeItem.parentElement.parentElement);
+				this.removeItem(id);
+			} else if (event.target.classList.contains('fa-chevron-up')) {
+				let addCount = event.target;
+				let id = addCount.dataset.id;
+				let temporaryItemInCart = cart.find((item) => item.id === id);
+				temporaryItemInCart.count = temporaryItemInCart.count + 1;
+				Storage.saveCart(cart);
+				this.setCartValues(cart);
+				addCount.nextElementSibling.innerText = temporaryItemInCart.count;
+			} else if (event.target.classList.contains('fa-chevron-down')) {
+				let lowerCount = event.target;
+				let id = lowerCount.dataset.id;
+				let temporaryItemInCart = cart.find((item) => item.id === id);
+				temporaryItemInCart.count = temporaryItemInCart.count - 1;
+				if (temporaryItemInCart.count > 0) {
+					Storage.saveCart(cart);
+					this.setCartValues(cart);
+					lowerCount.previousElementSibling.innerText = temporaryItemInCart.count;
+				} else {
+					cartContent.removeChild(lowerCount.parentElement.parentElement);
+					this.removeItem(id);
+				}
+			}
+		});
 	}
 	clearCartMethod () {
 		// console.log(this);
 		let cartItems = cart.map((item) => item.id);
-		console.log(cartItems);
+		// console.log(cartItems);
 		cartItems.forEach((id) => this.removeItem(id));
-		console.log(cartContent.children);
+		// console.log(cartContent.children);
 
 		while (cartContent.children.length > 0) {
 			cartContent.removeChild(cartContent.children[0]);
