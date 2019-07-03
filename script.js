@@ -1,11 +1,10 @@
-// If you want to use "products.json" file, you've to comment and uncomment a few lines just in case you do not want to use "contentful API". First, comment these below lines from here to...
+// If you want to use "products.json" file, you've to comment and uncomment a few lines just in case you do not want to use "contentful API".
+// First, comment these below lines from here to...
 const client = contentful.createClient({
 	// This is the space ID. A space is like a project folder in Contentful terms
-	space       : 'qveid79p3kya',
-	// space       : 'YOUR_OWN_Space ID',
+	space       : 'YOUR_OWN_Space ID',
 	// This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-	accessToken : 'vHQAQrRlSQC73Y1mejx2atATsGPAujM0BGujLsIhZNo',
-	// accessToken : 'YOUR_OWN_Content Delivery API - access token',
+	accessToken : 'YOUR_OWN_Content Delivery API - access token',
 });
 
 // console.log(client);
