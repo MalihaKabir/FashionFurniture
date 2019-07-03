@@ -331,3 +331,31 @@ body {
 	margin-bottom: 1rem;
 }
 /* End of CART section */
+
+/* Footer section starts */
+.footer {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(228, 204, 236, 0.5);
+	margin-top: 3rem;
+	padding: 2rem 0 2.5rem 0;
+}
+
+.footer h3 {
+	border-bottom: 1px solid rgb(84, 22, 228);
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.footer p {
+	letter-spacing: 3px;
+	padding-bottom: 0.2em;
+}
+.footer p i {
+	padding-top: 0.5em;
+	/* color: var(--primaryColor); */
+	color: #ac7fe0;
+	font-size: 2em;
+}
+/* End of Footer section */
