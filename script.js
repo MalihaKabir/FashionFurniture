@@ -1,11 +1,15 @@
+// If you want to use "products.json" file, you've to comment and uncomment a few lines just in case you do not want to use "contentful API". First, comment these below lines from here to...
 const client = contentful.createClient({
 	// This is the space ID. A space is like a project folder in Contentful terms
-	space       : 'YOUR_OWN_Space ID',
+	space       : 'qveid79p3kya',
+	// space       : 'YOUR_OWN_Space ID',
 	// This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-	accessToken : 'YOUR_OWN_Content Delivery API - access token',
+	accessToken : 'vHQAQrRlSQC73Y1mejx2atATsGPAujM0BGujLsIhZNo',
+	// accessToken : 'YOUR_OWN_Content Delivery API - access token',
 });
 
 // console.log(client);
+// ...to here. Then...
 
 // all vars:
 const cartBtn = document.querySelector('.cart-btn'); // in navbar
@@ -30,15 +34,22 @@ let buttonsDOM = [];
 class Products {
 	async getProducts () {
 		try {
+			// ...then comment these lines to use products.json file from here...
 			let contentful = await client.getEntries({
 				content_type : 'fashionFurniture',
 			});
+			// ... to here.
 
+			// uncomment these three lines to use products.json file from here...
 			// let result = await fetch('products.json');
 			// let data = await result.json();
-
 			// let products = data.items;
+			// ...to here.
+
+			// comment this line to use products.json file from here...
 			let products = contentful.items;
+			// ...to here. And this is it. This website is good to go without API.
+
 			products = products.map((item) => {
 				const { title, price } = item.fields;
 				const { id } = item.sys;
