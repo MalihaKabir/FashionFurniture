@@ -224,8 +224,7 @@ class Storage {
 		localStorage.setItem('cart', JSON.stringify(cart));
 	}
 	static getCart () {
-		return
-			localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) :
+		return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) :
 			[];
 	}
 }
